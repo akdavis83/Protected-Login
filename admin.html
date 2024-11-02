@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="icon" href="https://fav.farm/✒️" />
+
+    <script>
+        function loadAdminContent() {
+            // Get the unique hash from the URL
+            const userHash = window.location.hash.substring(1);
+
+            // Simple check for access (for demo only)
+            if (userHash) {
+                document.body.innerHTML = `<h1>Welcome to your store page, your current user ID is: ${userHash}</h1>`;
+            } else {
+                // Redirect to login if no hash is found
+                window.location.href = "login.html";
+            }
+        }
+
+        // Run when page loads
+        window.onload = loadAdminContent;
+    </script>
+</head>
+<body>
+    <p>Loading...</p>
+</body>
+</html>
